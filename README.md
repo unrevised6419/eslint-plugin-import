@@ -259,6 +259,8 @@ export default defineConfig(
 );
 ```
 
+On ESLint versions older than v9.22.0 that support flat config, [import `defineConfig` from `@eslint/config-helpers`](https://eslint.org/blog/2025/03/flat-config-extends-define-config-global-ignores/#support-for-older-eslint-versions) instead of `eslint/config`.
+
 `tseslint.config()` is [deprecated](https://typescript-eslint.io/packages/typescript-eslint/#config-deprecated) in favor of ESLint's `defineConfig()`; the same `extends` usage applies if you are still on it.
 
 `importPlugin.flatConfigs.recommended` does not specify a `files` pattern. Scope it to JavaScript and TypeScript files in projects that also lint other file types. For Angular projects, use the Angular-specific parser and apply the import plugin configuration only to the files it can parse, rather than to Angular HTML templates.
